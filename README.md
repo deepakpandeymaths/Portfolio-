@@ -18,6 +18,23 @@ I am pursuing an M.Sc. in Mathematics and Computing at the Central University of
 
 `Python` · `R` · `MATLAB` · `MySQL` · `Excel` · `JavaScript` · `PHP` · `MongoDB` · `Django`
 
+## Certifications and academic training
+
+- **Essential Mathematics for Machine Learning** — NPTEL, IIT Roorkee (2025)
+- **Software Reliability** — NPTEL, IIT (ISM) Dhanbad (2026)
+- **Basics of Machine Learning** — Great Learning
+- **Certificate of Appreciation — Paper Presentation** — ICADMS 2026
+- **Career Guidance Session** — IIT Hyderabad, in association with GradGuru Innovations
+- **National-level Mathematics E-Quiz participation** — S. A. Jain College, Haryana
+- **Certificate of Appreciation — Poster Presentation** — Central University of Andhra Pradesh, “Recent Advancements in Mathematics”
+
+## Workshops and subject guidance
+
+- **Advanced Numerical Methods using R Software** — October 2025
+- **Fundamentals of Artificial Intelligence and Machine Learning: Scope and Applications** — Prof. Srinivas Rao Pentyala
+- **Earthquake Prediction using Ionospheric Radiation Technique** — Prasanna Waichal, Director and Chief Scientist, Waichal Research, Maharashtra
+- **Practical Training on Modern AI Language Models** — Mr. N. Sukumar, Senior Software Engineer, Wipro, Bengaluru
+
 ## Academic profiles
 
 [ORCID](https://orcid.org/0009-0007-5635-5547) · [Academia.edu](https://cuap.academia.edu/deepakpandeymaths) · [LinkedIn](https://www.linkedin.com/in/deepakpandeymaths/) · [ResearchGate](https://www.researchgate.net/profile/Deepak-Pandey-57) · [HAL](https://hal.science/hal-05730064)
