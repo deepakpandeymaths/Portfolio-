@@ -1,4 +1,4 @@
-# Deepak Pandey
+# DEEPAK PANDEY
 
 ### Computational mathematics · scientific computing · research
 
