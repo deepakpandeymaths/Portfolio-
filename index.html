@@ -3,73 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Academic portfolio of Deepak Pandey, an M.Sc. Mathematics and Computing student and researcher.">
-  <meta name="theme-color" content="#0f766e">
-  <title>Deepak Pandey | Mathematics &amp; Computing</title>
+  <meta name="description" content="Deepak Pandey - computational mathematics researcher working across numerical methods, scientific computing, and machine learning.">
+  <meta name="theme-color" content="#0b1220">
+  <title>Deepak Pandey | Computational Mathematics</title>
   <style>
-    :root { color-scheme: light dark; --bg:#f4f7f7; --surface:#fff; --surface-muted:#eaf2f1; --text:#173234; --muted:#526668; --accent:#0f766e; --accent-dark:#0b5752; --border:#cfe0de; --shadow:0 14px 35px rgba(18,57,58,.09); }
+    :root { --bg:#f5f7fb; --surface:#fff; --ink:#172033; --muted:#5f6b7d; --line:#dce3ef; --navy:#0b1220; --blue:#2563eb; --cyan:#06b6d4; --soft:#eef5ff; --shadow:0 18px 50px rgba(23,32,51,.09); }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
-    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.65; background:var(--bg); color:var(--text); }
-    a { color:var(--accent-dark); }
-    a:focus-visible,.profile-card:focus-visible { outline:3px solid #f59e0b; outline-offset:3px; }
-    .skip-link { position:absolute; left:1rem; top:-4rem; padding:.65rem 1rem; background:var(--surface); border-radius:.5rem; z-index:2; }
-    .skip-link:focus { top:1rem; }
-    .hero { background:linear-gradient(135deg,#0f766e,#164e63); color:#fff; padding:5rem 1.25rem 4rem; }
-    .hero-inner,main { max-width:980px; margin:0 auto; }
-    .eyebrow { margin:0 0 .75rem; color:#b9f2e9; font-weight:700; letter-spacing:.08em; text-transform:uppercase; font-size:.8rem; }
-    h1,h2 { line-height:1.2; }
-    h1 { margin:0; font-size:clamp(2.4rem,7vw,4.7rem); letter-spacing:-.04em; }
-    .tagline { max-width:650px; margin:1rem 0 0; font-size:clamp(1.05rem,2vw,1.35rem); color:#e3fffb; }
-    nav { margin-top:2rem; display:flex; flex-wrap:wrap; gap:.65rem; }
-    nav a { color:#fff; text-decoration:none; border:1px solid rgba(255,255,255,.45); border-radius:999px; padding:.4rem .85rem; font-size:.9rem; }
-    nav a:hover { background:rgba(255,255,255,.16); }
-    main { padding:1.25rem; display:grid; gap:1.25rem; }
-    section { scroll-margin-top:1rem; background:var(--surface); border:1px solid var(--border); border-radius:1rem; padding:clamp(1.25rem,4vw,2rem); box-shadow:var(--shadow); }
-    h2 { margin:0 0 1rem; color:var(--accent-dark); font-size:clamp(1.35rem,3vw,1.75rem); }
+    body { margin:0; color:var(--ink); background:var(--bg); font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.65; }
+    a { color:var(--blue); }
+    a:focus-visible, .button:focus-visible { outline:3px solid #f59e0b; outline-offset:3px; }
+    .hero { color:#fff; background:radial-gradient(circle at 78% 10%,rgba(6,182,212,.32),transparent 34%),linear-gradient(135deg,#0b1220 0%,#13254a 62%,#0e7490 100%); padding:5.5rem 1.25rem 4rem; }
+    .hero-inner, main, footer { max-width:1080px; margin:0 auto; }
+    .eyebrow { color:#8ee9f4; font-size:.78rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; margin:0 0 1rem; }
+    h1,h2,h3 { line-height:1.2; }
+    h1 { max-width:780px; font-size:clamp(2.8rem,8vw,5.8rem); letter-spacing:-.055em; margin:0; }
+    .tagline { max-width:720px; color:#dbeafe; font-size:clamp(1.05rem,2vw,1.35rem); margin:1.25rem 0 0; }
+    .hero-meta { color:#bfdbfe; margin:1.1rem 0 0; }
+    nav { display:flex; flex-wrap:wrap; gap:.65rem; margin-top:2rem; }
+    nav a { border:1px solid rgba(255,255,255,.35); border-radius:999px; color:#fff; padding:.5rem .9rem; text-decoration:none; font-size:.92rem; }
+    nav a:hover { background:rgba(255,255,255,.14); }
+    main { display:grid; gap:1.2rem; padding:1.25rem; }
+    section { background:var(--surface); border:1px solid var(--line); border-radius:1.15rem; box-shadow:var(--shadow); padding:clamp(1.3rem,4vw,2.1rem); scroll-margin-top:1rem; }
+    h2 { color:#173a72; font-size:clamp(1.45rem,3vw,1.9rem); margin:0 0 1rem; }
+    h3 { font-size:1.05rem; margin:.1rem 0 .45rem; }
     p { margin-top:0; }
     .muted { color:var(--muted); }
-    .list { list-style:none; margin:0; padding:0; display:grid; gap:.7rem; }
-    .list li { padding-left:1.2rem; position:relative; }
-    .list li::before { content:""; width:.45rem; height:.45rem; position:absolute; left:0; top:.7rem; border-radius:50%; background:var(--accent); }
-    .two-column { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.25rem; }
-    .project-card { display:block; padding:1rem; border:1px solid var(--border); border-radius:.75rem; background:var(--surface-muted); text-decoration:none; }
-    .project-card:hover { border-color:var(--accent); transform:translateY(-2px); transition:transform .2s ease,border-color .2s ease; }
-    .project-card strong { display:block; color:var(--accent-dark); }
-    .profiles-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:.75rem; }
-    .profile-card { display:block; padding:.8rem 1rem; border:1px solid var(--border); border-radius:.7rem; background:var(--surface-muted); text-decoration:none; font-weight:700; }
-    .profile-card:hover { border-color:var(--accent); }
-    footer { max-width:980px; margin:0 auto; padding:0 1.25rem 2rem; color:var(--muted); font-size:.9rem; }
-    @media (max-width:640px) { .two-column { grid-template-columns:1fr; } .hero { padding-top:3.5rem; } }
-    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition-duration:.01ms !important; } }
-    @media (prefers-color-scheme:dark) { :root { --bg:#102123; --surface:#173033; --surface-muted:#1c3a3b; --text:#e7f4f1; --muted:#b5c9c6; --border:#315455; --accent-dark:#79ddd0; --shadow:0 14px 35px rgba(0,0,0,.2); } .profile-card,.project-card { color:var(--text); } }
+    .intro { font-size:1.08rem; max-width:850px; }
+    .grid-2, .grid-3 { display:grid; gap:1.2rem; }
+    .grid-2 { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .grid-3 { grid-template-columns:repeat(3,minmax(0,1fr)); }
+    .list { list-style:none; margin:0; padding:0; display:grid; gap:.72rem; }
+    .list li { padding-left:1.25rem; position:relative; }
+    .list li::before { background:linear-gradient(135deg,var(--blue),var(--cyan)); border-radius:50%; content:""; height:.48rem; left:0; position:absolute; top:.7rem; width:.48rem; }
+    .label { color:#64748b; font-size:.8rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+    .card { background:linear-gradient(145deg,#f8fbff,#eef5ff); border:1px solid #d5e4fb; border-radius:.9rem; padding:1.15rem; }
+    .card a { text-decoration:none; }
+    .card a:hover { text-decoration:underline; }
+    .card p { margin-bottom:0; }
+    .tech { display:flex; flex-wrap:wrap; gap:.55rem; }
+    .tech span { background:var(--soft); border:1px solid #d4e2fa; border-radius:999px; color:#24426e; font-size:.9rem; padding:.35rem .7rem; }
+    .profiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:.7rem; }
+    .profile { background:#f8fafc; border:1px solid var(--line); border-radius:.75rem; font-weight:750; padding:.8rem 1rem; text-decoration:none; }
+    .profile:hover { border-color:var(--blue); background:var(--soft); }
+    .publication { border-left:4px solid var(--cyan); padding-left:1rem; }
+    footer { color:var(--muted); font-size:.9rem; padding:0 1.25rem 2rem; }
+    @media (max-width:700px) { .grid-2,.grid-3 { grid-template-columns:1fr; } .hero { padding-top:3.8rem; } }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#content">Skip to content</a>
   <header class="hero">
     <div class="hero-inner">
-      <p class="eyebrow">Academic portfolio</p>
+      <p class="eyebrow">Computational mathematics · scientific computing · research</p>
       <h1>Deepak Pandey</h1>
-      <p class="tagline">M.Sc. Mathematics and Computing student exploring mathematical modelling, computation, and research.</p>
-      <p>Central University of Andhra Pradesh</p>
-      <nav aria-label="Primary navigation"><a href="#about">About</a><a href="#education">Education</a><a href="#projects">Projects</a><a href="#profiles">Profiles</a><a href="#contact">Contact</a></nav>
+      <p class="tagline">Mathematics and Computing researcher exploring numerical methods, differential equations, probability, and machine-learning-assisted modelling.</p>
+      <p class="hero-meta">M.Sc. Mathematics and Computing · Central University of Andhra Pradesh</p>
+      <nav aria-label="Primary navigation"><a href="#about">About</a><a href="#work">Selected work</a><a href="#publication">Publication</a><a href="#skills">Skills</a><a href="#connect">Connect</a></nav>
     </div>
   </header>
-  <main id="content">
-    <section id="about" aria-labelledby="about-title"><h2 id="about-title">About me</h2><p>I am pursuing a Master of Science in Mathematics and Computing at the Central University of Andhra Pradesh. My research interests include linear algebra, numerical linear algebra, Python, and machine learning. I plan to pursue a Ph.D. after completing my master’s degree and contribute to the mathematical community through research and collaboration.</p></section>
-    <div class="two-column">
-      <section id="education" aria-labelledby="education-title"><h2 id="education-title">Education</h2><ul class="list"><li><strong>M.Sc. Mathematics and Computing</strong><br><span class="muted">Central University of Andhra Pradesh · 2025–2027</span></li><li><strong>B.Sc. Mathematics</strong><br><span class="muted">Veer Bahadur Singh Purvanchal University · 2021–2024</span></li></ul></section>
-      <section aria-labelledby="interests-title"><h2 id="interests-title">Research interests</h2><ul class="list"><li>Linear algebra</li><li>Numerical linear algebra</li><li>Python and scientific computing</li><li>Machine learning</li></ul></section>
+  <main>
+    <section id="about"><p class="label">Research profile</p><h2>Turning mathematical ideas into reproducible computational work.</h2><p class="intro">I am pursuing an M.Sc. in Mathematics and Computing at the Central University of Andhra Pradesh. My work sits at the intersection of applied mathematics, numerical analysis, scientific programming, and machine learning. I am especially interested in building clear, reliable computational methods for differential equations and stochastic or data-informed models.</p></section>
+    <div class="grid-2">
+      <section><p class="label">Education</p><h2>Academic foundation</h2><ul class="list"><li><strong>M.Sc. Mathematics and Computing</strong><br><span class="muted">Central University of Andhra Pradesh · 2025–2027</span></li><li><strong>B.Sc. Physics and Mathematics</strong><br><span class="muted">Veer Bahadur Singh Purvanchal University · 2021–2024</span></li></ul></section>
+      <section><p class="label">Research interests</p><h2>Questions I explore</h2><div class="tech"><span>Numerical methods</span><span>Differential equations</span><span>Probability</span><span>Stochastic processes</span><span>Scientific computing</span><span>ML-assisted modelling</span></div></section>
     </div>
-    <section id="projects" aria-labelledby="projects-title"><h2 id="projects-title">Projects</h2><p class="muted">Selected work and current learning projects.</p><a class="project-card" href="https://github.com/deepakpandeymaths/Python-program-on-bank-management-system." target="_blank" rel="noopener noreferrer"><strong>Python Program on Bank Management System</strong><span class="muted">A Python project focused on basic banking workflows and programming fundamentals.</span></a></section>
-    <div class="two-column">
-      <section aria-labelledby="skills-title"><h2 id="skills-title">Skills</h2><ul class="list"><li><strong>Mathematics:</strong> Linear algebra, numerical linear algebra, abstract algebra, proof writing</li><li><strong>Computing:</strong> Python, LaTeX</li><li><strong>Other:</strong> Academic writing, problem solving, logic</li></ul></section>
-      <section aria-labelledby="honors-title"><h2 id="honors-title">Achievements &amp; honors</h2><ul class="list"><li>Certificate in the basics of machine learning</li><li>Strong academic record in B.Sc. and M.Sc.</li></ul></section>
-    </div>
-    <section id="profiles" aria-labelledby="profiles-title"><h2 id="profiles-title">Academic &amp; professional profiles</h2><div class="profiles-grid"><a class="profile-card" href="https://github.com/deepakpandeymaths" target="_blank" rel="noopener noreferrer">GitHub</a><a class="profile-card" href="https://orcid.org/0009-0007-5635-5547" target="_blank" rel="noopener noreferrer">ORCID</a><a class="profile-card" href="https://cuap.academia.edu/deepakpandeymaths" target="_blank" rel="noopener noreferrer">Academia.edu</a><a class="profile-card" href="https://www.linkedin.com/in/deepakpandeymaths/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></section>
-    <section id="contact" aria-labelledby="contact-title"><h2 id="contact-title">Contact</h2><p>For academic discussions and collaboration, email <a href="mailto:deepakpandeytm@gmail.com">deepakpandeytm@gmail.com</a>.</p></section>
+    <section id="work"><p class="label">Selected work</p><h2>Projects with a mathematical and computational core</h2><div class="grid-3"><article class="card"><h3><a href="https://github.com/deepakpandeymaths/xLaDe" target="_blank" rel="noopener noreferrer">xLaDe · Lean 4 ecosystem framework</a></h3><p class="muted">A reproducibility framework for preserving Lean 4 toolchain metadata, dependencies, and execution context. I contributed to its metadata, policy-enforcement, and experiment-management work.</p></article><article class="card"><h3>Second-order ODEs via machine learning</h3><p class="muted">Analytical and computational approaches to second-order ordinary differential equations, with classical numerical schemes benchmarked against machine-learning-based approximators.</p></article><article class="card"><h3><a href="https://github.com/deepakpandeymaths/Python-program-on-bank-management-system." target="_blank" rel="noopener noreferrer">Bank management system</a></h3><p class="muted">A Python simulation project demonstrating structured programming, data handling, and software-design practice.</p></article></div></section>
+    <section id="publication"><p class="label">Research communication</p><h2>Publication</h2><div class="publication"><strong>Not Letting Proofs Die: xLaDe, a Lean 4 Ecosystem Framework</strong><p class="muted">L. S. Bisht, D. Pandey, M. Sahoo, T. Siva · Research Square preprint, 2026</p><p><a href="https://doi.org/10.21203/rs.3.rs-11019636/v1" target="_blank" rel="noopener noreferrer">DOI</a> · <a href="https://hal.science/hal-05730064" target="_blank" rel="noopener noreferrer">HAL archive</a></p></div><p class="muted" style="margin:1rem 0 0">Also presented: “Analytical and Computational Approaches to Solving Second Order Differential Equations with Machine Learning” at ICAMDS 2026.</p></section>
+    <div class="grid-2" id="skills"><section><p class="label">Technical toolkit</p><h2>Tools I use</h2><div class="tech"><span>Python</span><span>R</span><span>MATLAB</span><span>MySQL</span><span>Excel</span><span>HTML</span><span>JavaScript</span><span>PHP</span><span>MongoDB</span><span>Django</span></div></section><section><p class="label">Training</p><h2>Selected learning</h2><ul class="list"><li>Essential Mathematics for Machine Learning · NPTEL, IIT Roorkee</li><li>Software Reliability · NPTEL, IIT (ISM) Dhanbad</li><li>Basics of Machine Learning · Great Learning</li></ul></section></div>
+    <section id="connect"><p class="label">Academic and professional profiles</p><h2>Let’s connect</h2><div class="profiles"><a class="profile" href="https://github.com/deepakpandeymaths" target="_blank" rel="noopener noreferrer">GitHub</a><a class="profile" href="https://orcid.org/0009-0007-5635-5547" target="_blank" rel="noopener noreferrer">ORCID</a><a class="profile" href="https://cuap.academia.edu/deepakpandeymaths" target="_blank" rel="noopener noreferrer">Academia.edu</a><a class="profile" href="https://www.linkedin.com/in/deepakpandeymaths/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="profile" href="https://www.researchgate.net/profile/Deepak-Pandey-57" target="_blank" rel="noopener noreferrer">ResearchGate</a><a class="profile" href="https://hal.science/hal-05730064" target="_blank" rel="noopener noreferrer">HAL · xLaDe</a></div><p style="margin:1.2rem 0 0">For academic discussions and collaboration: <a href="mailto:deepakpandeytm@gmail.com">deepakpandeytm@gmail.com</a></p></section>
   </main>
-  <footer><p>© 2026 Deepak Pandey · Portfolio updated August 2026</p></footer>
+  <footer><p>© 2026 Deepak Pandey · Portfolio focused on computational mathematics and reproducible research.</p></footer>
 </body>
 </html>
